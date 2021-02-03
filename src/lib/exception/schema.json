@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsWatsonException",
+  "title": "Watson exception options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the exception.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the exception?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the exception in."
+    },
+    "sourceRoot": {
+      "type": "string",
+      "description": "Watson exception source root directory."
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag to indicate if a directory is created."
+    },
+    "spec": {
+      "type": "boolean",
+      "default": true,
+      "description": "Specifies if a spec file is generated."
+    }
+  },
+  "required": ["name"]
+}

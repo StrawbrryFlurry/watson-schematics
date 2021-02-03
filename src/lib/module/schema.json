@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsWatsonGuard",
+  "title": "Watson module options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the module.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the module?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the module in."
+    },
+    "module": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to import the module."
+    },
+
+    "sourceRoot": {
+      "type": "string",
+      "description": "Watson Module source root directory."
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag to indicate if a directory is created."
+    }
+  },
+  "required": ["name"]
+}

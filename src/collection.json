@@ -1,0 +1,50 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "application": {
+      "factory": "./lib/application/application.factory#main",
+      "description": "Create a Watson application.",
+      "schema": "./lib/application/schema.json"
+    },
+    "exception-handler": {
+      "factory": "./lib/exception-handler/exception-handler.factory#main",
+      "description": "Create a Watson custom exception handler.",
+      "schema": "./lib/exception-handler/schema.json"
+    },
+    "exception": {
+      "factory": "./lib/exception/exception.factory#main",
+      "description": "Create a Watson custom exception.",
+      "schema": "./lib/exception/schema.json"
+    },
+    "filter": {
+      "factory": "./lib/filter/filter.factory#main",
+      "description": "Create a Watson filter.",
+      "schema": "./lib/filter/schema.json"
+    },
+    "guard": {
+      "factory": "./lib/guard/guard.factory#main",
+      "description": "Create a Watson guard.",
+      "schema": "./lib/guard/schema.json"
+    },
+    "module": {
+      "factory": "./lib/module/module.factory#main",
+      "description": "Create a Watson module.",
+      "schema": "./lib/module/schema.json"
+    },
+    "pipe": {
+      "factory": "./lib/pipe/pipe.factory#main",
+      "description": "Create a Watson pipe.",
+      "schema": "./lib/pipe/schema.json"
+    },
+    "receiver": {
+      "factory": "./lib/receiver/receiver.factory#main",
+      "description": "Create a Watson receiver.",
+      "schema": "./lib/receiver/schema.json"
+    },
+    "service": {
+      "factory": "./lib/service/service.factory#main",
+      "description": "Create a Watson service.",
+      "schema": "./lib/service/schema.json"
+    }
+  }
+}

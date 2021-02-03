@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsWatsonReceiver",
+  "title": "Watson receiver options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the receiver.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the receiver?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the receiver in."
+    },
+    "module": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to import the receiver."
+    },
+    "sourceRoot": {
+      "type": "string",
+      "description": "Watson receiver source root directory."
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag to indicate if a directory is created."
+    },
+    "spec": {
+      "type": "boolean",
+      "default": true,
+      "description": "Specifies if a spec file is generated."
+    }
+  },
+  "required": ["name"]
+}

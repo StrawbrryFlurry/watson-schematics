@@ -1,0 +1,22 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "rootDir": "src",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./dist/main.js"
+  },
+  "dependencies": {
+    "@watsonjs/common": "0.0.4",
+    "@watsonjs/core": "0.0.4",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22"
+  }
+}

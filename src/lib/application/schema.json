@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsWatsonApplication",
+  "title": "Watson Application Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new project?"
+    },
+    "author": {
+      "type": "string",
+      "description": "Watson application author.",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "Watson application description.",
+      "default": ""
+    },
+    "directory": {
+      "type": "string",
+      "description": "Watson application destination directory"
+    },
+    "version": {
+      "type": "string",
+      "description": "Watson application version.",
+      "default": "0.0.1"
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "Watson application package manager."
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Watson application dependencies."
+    },
+    "devDependencies": {
+      "type": "string",
+      "description": "Watson application development dependencies."
+    }
+  },
+  "required": ["name"]
+}

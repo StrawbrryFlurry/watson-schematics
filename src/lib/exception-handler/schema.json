@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsWatsonExceptionHandler",
+  "title": "Watson exception handler options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the exception handler.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the exception handler?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the exception handler in."
+    },
+    "module": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to import the exception handler."
+    },
+    "sourceRoot": {
+      "type": "string",
+      "description": "Watson exception handler source root directory."
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag to indicate if a directory is created."
+    },
+    "spec": {
+      "type": "boolean",
+      "default": true,
+      "description": "Specifies if a spec file is generated."
+    }
+  },
+  "required": ["name"]
+}
