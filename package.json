@@ -1,11 +1,12 @@
 {
   "name": "@watsonjs/schematics",
-  "version": "0.0.1",
-  "description": "Schematics for the Watson framework",
+  "version": "0.0.3",
+  "description": "Fast, scalable framework for building Discord applications (@schematics)",
   "main": "index.js",
   "scripts": {
     "build": "rimraf -rf dist && tsc --project tsconfig.lib.json",
     "clean": "gulp clean:src",
+    "publish:npm": "npm publish --access public",
     "postbuild": "npm run copy:collection && npm run copy:lib",
     "copy:collection": "cpx src/collection.json dist && cpx 'src/lib/**/schema.json' dist/lib",
     "copy:lib": "cpx 'src/lib/**/files/**/*.*' dist/lib"
@@ -15,7 +16,7 @@
   ],
   "license": "MIT",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "dependencies": {
     "@angular-devkit/core": "^11.1.2",
@@ -33,5 +34,6 @@
     "gulp-clean": "^0.4.0",
     "rimraf": "^3.0.2",
     "ts-node": "9.1.1"
-  }
+  },
+  "schematics": "./dist/collection.json"
 }

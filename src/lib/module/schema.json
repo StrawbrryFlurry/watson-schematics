@@ -30,7 +30,7 @@
     },
     "flat": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "Flag to indicate if a directory is created."
     }
   },
